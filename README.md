@@ -62,8 +62,59 @@ Is one well-designed sentiment pipeline sufficient for analytics use, or does in
 
 - Media & Entertainment showed distinct behavior due to non-financial language patterns
 <img width="481" height="239" alt="Screenshot 2025-12-23 at 2 09 56 PM" src="https://github.com/user-attachments/assets/239c60c5-803a-4c6e-92cc-17175ba2a8f6" />
-<img width="481" height="135" alt="Screenshot 2025-12-23 at 2 10 31 PM" src="https://github.com/user-attachments/assets/5f29d4f3-f914-433e-84d2-9124df74ad0b" />
 
 ### Business Takeaway
 For analytics teams, a **single general sentiment pipeline** is usually sufficient and more cost-effective. Industry-level customization should be applied **selectively**, not by default.
 
+## 4. Insights Deep Dive
+
+### Model Evaluation Strategy
+Models were evaluated using **interpretable, analyst-relevant metrics**, not just in-sample fit:
+
+- Regression: MAE, RMSE  
+- Classification: Accuracy, Precision, Recall, F1  
+- Train vs Test comparison to detect overfitting  
+
+### Comparative Results
+
+| Approach | Insight |
+|---|---|
+| TextBlob + LSTM | Simple baseline, limited predictive power |
+| BERT + LSTM | Strong training fit, weak generalization |
+| **FinBERT + LSTM** | Best balance of accuracy and stability |
+
+**Analytical insight:**  
+Higher model complexity does not guarantee better out-of-sample performance. Stability and generalization matter more for business analytics.
+
+### Industry-Level Analysis
+
+#### Cross-Industry (General Model)
+- Stable performance across all sectors  
+- Low train–test error gap  
+- Best candidate for production analytics use  
+
+#### Media & Entertainment
+- Headlines driven by content releases and public sentiment  
+- Less aligned with traditional financial language  
+- Industry-specific modeling captured nuance more effectively  
+
+#### Other Industries
+- Technology, Energy, Healthcare, Finance, and Real Estate showed **minimal benefit** from specialization
+
+## 5. Recommendations
+
+From a **data analyst perspective**:
+
+1. **Start with a general sentiment pipeline**
+   - Lower maintenance cost  
+   - Easier validation  
+   - Strong cross-industry performance  
+
+2. **Apply segmentation selectively**
+   - Use industry-specific tuning only when language patterns differ meaningfully  
+
+3. **Improve features, not just models**
+   - Combine sentiment with volume, volatility, or event-based indicators  
+
+4. **Use sentiment as decision support**
+   - Complementary signal, not a standalone trading system  
