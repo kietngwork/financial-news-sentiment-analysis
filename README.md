@@ -63,12 +63,9 @@ Is one well-designed sentiment pipeline sufficient for analytics use, or does in
 - Media & Entertainment showed distinct behavior due to non-financial language patterns
 <img width="481" height="239" alt="Screenshot 2025-12-23 at 2 09 56 PM" src="https://github.com/user-attachments/assets/239c60c5-803a-4c6e-92cc-17175ba2a8f6" />
 
-### Business Takeaway
 For analytics teams, a **single general sentiment pipeline** is usually sufficient and more cost-effective. Industry-level customization should be applied **selectively**, not by default.
 
 ## 4. Insights Deep Dive
-
-### Model Evaluation Strategy
 Models were evaluated using **interpretable, analyst-relevant metrics**, not just in-sample fit:
 
 - Regression: MAE, RMSE  
@@ -99,9 +96,6 @@ Higher model complexity does not guarantee better out-of-sample performance. Sta
 - Technology, Energy, Healthcare, Finance, and Real Estate showed **minimal benefit** from specialization
 
 ## 5. Recommendations
-
-From a **data analyst perspective**:
-
 1. **Start with a general sentiment pipeline**
    - Lower maintenance cost  
    - Easier validation  
