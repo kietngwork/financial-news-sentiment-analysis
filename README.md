@@ -40,3 +40,30 @@ Is one well-designed sentiment pipeline sufficient for analytics use, or does in
 | Headline | Financial news title |
 | Sentiment_score | Numeric sentiment derived from NLP models |
 | Price_Change | (Close − Open) / Open |
+
+### Data Cleaning & Preparation
+- Removed ~6% of rows with missing tickers  
+- Standardized date formats and aligned trading days  
+- Aggregated multiple headlines into **daily average sentiment per stock**  
+- Assigned neutral sentiment on days with no news  
+- Adjusted for non-trading days by rolling sentiment forward
+
+## 3. Executive Summary
+
+### Key Findings
+- Financial news sentiment contains **measurable predictive signal**, but strength varies by model and industry
+<img width="477" height="382" alt="Screenshot 2025-12-23 at 2 04 19 PM" src="https://github.com/user-attachments/assets/33e4578d-3f7e-49dd-9b2c-4b33b1ed712d" />
+
+- A **general FinBERT-based sentiment model** performed consistently across most sectors
+<img width="494" height="217" alt="Screenshot 2025-12-23 at 2 05 41 PM" src="https://github.com/user-attachments/assets/cc4f9820-9c74-4631-a9d1-090e5d0fc7b4" />
+
+- Industry-specific tuning **did not always improve accuracy** and often increased overfitting
+<img width="485" height="198" alt="Screenshot 2025-12-23 at 2 07 06 PM" src="https://github.com/user-attachments/assets/3875d219-65cb-436b-a90a-e1768c641074" />
+
+- Media & Entertainment showed distinct behavior due to non-financial language patterns
+<img width="481" height="239" alt="Screenshot 2025-12-23 at 2 09 56 PM" src="https://github.com/user-attachments/assets/239c60c5-803a-4c6e-92cc-17175ba2a8f6" />
+<img width="481" height="135" alt="Screenshot 2025-12-23 at 2 10 31 PM" src="https://github.com/user-attachments/assets/5f29d4f3-f914-433e-84d2-9124df74ad0b" />
+
+### Business Takeaway
+For analytics teams, a **single general sentiment pipeline** is usually sufficient and more cost-effective. Industry-level customization should be applied **selectively**, not by default.
+
