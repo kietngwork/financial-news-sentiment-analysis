@@ -75,15 +75,12 @@ Models were evaluated using **interpretable, analyst-relevant metrics**, not jus
 - Classification: Accuracy, Precision, Recall, F1  
 - Train vs Test comparison to detect overfitting  
 
-### Comparative Results
-
 | Approach | Insight |
 |---|---|
 | TextBlob + LSTM | Simple baseline, limited predictive power |
 | BERT + LSTM | Strong training fit, weak generalization |
 | **FinBERT + LSTM** | Best balance of accuracy and stability |
 
-**Analytical insight:**  
 Higher model complexity does not guarantee better out-of-sample performance. Stability and generalization matter more for business analytics.
 
 ### Industry-Level Analysis
