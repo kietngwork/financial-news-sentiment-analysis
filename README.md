@@ -1,4 +1,5 @@
 # 📊 Financial News Sentiment Analysis
+<img width="680" height="440" alt="image" src="https://github.com/user-attachments/assets/ca47b765-5015-4280-8b7b-54f307f499ab" />
 
 ## 1. Background & Overview
 
